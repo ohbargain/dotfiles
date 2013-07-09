@@ -1,0 +1,22 @@
+[user]
+	name = Seil Oh
+	email = hardboiledbaby@gmail.com
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[push]
+    default = matching
+[core]
+	editor = subl -w
+	excludesfile = /Users/osel/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+	co = checkout
