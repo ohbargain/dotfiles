@@ -22,13 +22,13 @@ else
     done
 fi
 
-#git submodule sync
-#git submodule init
-#git submodule update
-#git submodule foreach git pull origin master
-#git submodule foreach git submodule init
-#git submodule foreach git submodule update
-#
-## setup command-t
-#cd _vim/bundle/command-t
-#rake make
+VUNDLE_DIR="_vim/bundle/vundle"
+if [ ! -d "$VUNDLE_DIR" ]; then
+    git clone https://github.com/gmarik/Vundle.vim.g $VUNDLE_DIR
+    vim +PluginInstall +qall!
+else 
+    cd $VUNDLE_DIR
+    git pull origin master
+    vim +PluginUpdate +qall!
+fi
+

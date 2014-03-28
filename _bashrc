@@ -134,13 +134,6 @@ fi
     fi
   }
 } >/dev/null 2>/dev/null
-#virtualenvwrapper loading
-
-export WORKON_HOME=~/dev/.venv
-venwrap=`type -P /usr/local/bin/virtualenvwrapper.sh`
-if [ "$venwrap" != "" ]; then
-    source $venwrap
-fi
 
 #osx vim
 if [ -x "/Applications/MacVim.app/Contents/MacOS/Vim" ]; then
@@ -198,12 +191,12 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # alias spk="pkill -f 'spork'"
 
 #dropblog dropbox keys
-export DROPBOX_APP_KEY="xe2s4pui3bq36dj"
-export DROPBOX_APP_SECRET="1pvihh9qxhz2gum"
+# export DROPBOX_APP_KEY="xe2s4pui3bq36dj"
+# export DROPBOX_APP_SECRET="1pvihh9qxhz2gum"
 
 #dropblog facebook keys
-export FACEBOOK_APP_KEY="428976667167217"
-export FACEBOOK_APP_SECRET="6896d40c514ec6211e2718fe62147381"
+# export FACEBOOK_APP_KEY="428976667167217"
+# export FACEBOOK_APP_SECRET="6896d40c514ec6211e2718fe62147381"
 
 #pycam -> pygtk
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages
@@ -214,16 +207,44 @@ PATH=$HOME/dev/tools/android-sdk-macosx/tools:$HOME/dev/tools/android-sdk-macosx
 #npm binaries path 
 PATH=/usr/local/share/npm/bin:$PATH
 
-export PATH
-
 #django settings env
-export DJANGO_SETTINGS_MODULE=okbeans.settings.local
 
 #rbenv setup
-
-eval "$(rbenv init -)"
+# PATH=$HOME/.rbenv/bin:$PATH
+# eval "$(rbenv init -)"
 
 #terminal locale settings
 export LC_ALL=en_US.UTF-8
 
+#qt env path
+PATH=$PATH:$HOME/dev/tools/qt/5.1.0/clang_64/bin:/System/Library/Frameworks/Python.framework/Versions/2.7/bin
 
+#my script path
+# PATH=$PATH:/Users/osel/dev/scripts/bin
+
+
+#gradle settings
+GRADLE_HOME=/Users/osel/dev/tools/gradle/1.9
+export GRADLE_HOME
+export PATH=$PATH:$GRADLE_HOME/bin
+
+#android settings
+ANDROID_HOME=/Users/osel/dev/tools/android-sdk-macosx
+export ANDROID_HOME
+
+#mavne setting for java 7
+JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME
+
+
+#virtualenvwrapper loading
+export WORKON_HOME=~/dev/.venv
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python'
+export PIP_RESPECT_VIRTUALENV=true
+venwrap=`type -P /usr/local/bin/virtualenvwrapper.sh`
+if [ "$venwrap" != "" ]; then
+    source $venwrap
+else 
+    echo "WARNING: Can't find virtualenvwrapper.sh"
+fi

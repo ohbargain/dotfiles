@@ -17,20 +17,22 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
 Bundle 'sontek/rope-vim'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'alfredodeza/pytest.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'kien/ctrlp.vim'
+Bundle 'ervandew/supertab'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'andviro/flake8-vim'
+Bundle 'Shougo/neocomplcache.vim'
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
 Bundle 'The-NERD-tree'
 
 " non github repos
-Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on     " required!
 "
@@ -98,7 +100,7 @@ imap <C-W> <C-O><C-W>
 map <leader>n :NERDTreeToggle<CR>
 
 " Run command-t file search
-map <leader>f :CommandT<CR>
+map <leader>f :CtrlPMixed<CR>
 " Ack searching
 nmap <leader>a <Esc>:Ack!
 
@@ -144,6 +146,7 @@ nnoremap <leader>. :lcd %:p:h<CR>
 """ Insert completion
 " don't select first item, follow typing in autocomplete
 set completeopt=menuone,longest,preview
+"set completeopt-=preview
 set pumheight=6             " Keep a small completion window
 
 " show a line at column 79
@@ -208,6 +211,7 @@ set smartcase               " unless uppercase letters are used in the regex.
 set smarttab                " Handle tabs more intelligently 
 set hlsearch                " Highlight searches by default.
 set incsearch               " Incrementally search while typing a /regex
+set infercase
 
 """" Display
 if has("gui_running")
@@ -287,3 +291,33 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" ===========================================================
+" DJANGO SETTING
+" ============================================================
+
+if filereadable($VIRTUAL_ENV . '/.vimrc')
+    source $VIRTUAL_ENV/.vimrc
+endif
+
+" ===========================================================
+" AUTOCOMPLETE 
+" ============================================================
+let g:SuperTabDefaultCompletionType = "context"
+
+" ===========================================================
+" EASYMOTION MAPPING 
+" ============================================================
+map / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map n <Plug>(easymotion-next)
+map N <Plug>(easymotion-prev)
+
+map <Leader>h <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>l <Plug>(easymotion-linebackward)
+
+" ===========================================================
+" flake8-vim setting 
+" ============================================================
+map <F7> :PyFlakeAuto<CR>
