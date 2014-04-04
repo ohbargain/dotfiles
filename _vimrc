@@ -17,18 +17,22 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'sontek/rope-vim'
 Bundle 'altercation/vim-colors-solarized'
-"Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'alfredodeza/pytest.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'ervandew/supertab'
-Bundle 'davidhalter/jedi-vim'
+Bundle 'klen/python-mode'
 Bundle 'andviro/flake8-vim'
 Bundle 'Shougo/neocomplcache.vim'
+Bundle 'terryma/vim-multiple-cursors'
+
+"Bundle 'sontek/rope-vim'
+"Bundle 'davidhalter/jedi-vim'
+"
 " vim-scripts repos
 Bundle 'The-NERD-tree'
 
