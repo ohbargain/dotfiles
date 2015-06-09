@@ -236,11 +236,14 @@ export ANDROID_HOME
 JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_HOME
 
+#Make Python3 default
+alias python=python3
+alias pip=pip3
 
 #virtualenvwrapper loading
-export WORKON_HOME=~/dev/.venv
+export WORKON_HOME=~/dev/python/.venv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python'
+export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python3'
 export PIP_RESPECT_VIRTUALENV=true
 venwrap=`type -P /usr/local/bin/virtualenvwrapper.sh`
 if [ "$venwrap" != "" ]; then
@@ -248,3 +251,5 @@ if [ "$venwrap" != "" ]; then
 else 
     echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
+#go setup
+export GOPATH=~/dev/go/packages

@@ -24,17 +24,20 @@ Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
-Bundle 'ervandew/supertab'
 Bundle 'klen/python-mode'
 Bundle 'andviro/flake8-vim'
-Bundle 'Shougo/neocomplcache.vim'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'fatih/vim-go'
+Bundle 'The-NERD-tree'
+Bundle 'powerline/powerline'
+" Bundle 'ervandew/supertab'
+" Bundle 'Shougo/neocomplcache.vim'
+
 
 "Bundle 'sontek/rope-vim'
 "Bundle 'davidhalter/jedi-vim'
 "
 " vim-scripts repos
-Bundle 'The-NERD-tree'
 
 " non github repos
 
@@ -307,6 +310,7 @@ endif
 " AUTOCOMPLETE 
 " ============================================================
 let g:SuperTabDefaultCompletionType = "context"
+let g:pymode_rope_complete_on_dot = 0
 
 " ===========================================================
 " EASYMOTION MAPPING 
