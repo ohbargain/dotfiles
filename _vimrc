@@ -18,6 +18,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'tomasr/molokai'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'alfredodeza/pytest.vim'
 Bundle 'tpope/vim-surround'
@@ -224,7 +225,7 @@ set infercase
 if has("gui_running")
     colorscheme solarized
 else
-    colorscheme solarized
+    colorscheme molokai
 endif
 
 " Paste from clipboard
