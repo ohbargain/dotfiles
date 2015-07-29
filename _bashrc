@@ -137,7 +137,7 @@ fi
 
 #osx vim
 if [ -x "/Applications/MacVim.app/Contents/MacOS/Vim" ]; then
-    PATH=/Applications/MacVim.app/Contents/MacOS/:$PATH
+    PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
 fi
 
 ##Path Setup
@@ -253,3 +253,11 @@ else
 fi
 #go setup
 export GOPATH=~/dev/go/packages
+
+#omnisharp settings
+source dnvm.sh
+
+#cocoapod settings 
+
+export GEM_HOME=$HOME/dev/.gem
+export PATH=$GEMHOME/bin:$PATH

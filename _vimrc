@@ -31,6 +31,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'fatih/vim-go'
 Bundle 'The-NERD-tree'
 Bundle 'powerline/powerline'
+Bundle 'keith/swift.vim'
 " Bundle 'ervandew/supertab'
 " Bundle 'Shougo/neocomplcache.vim'
 

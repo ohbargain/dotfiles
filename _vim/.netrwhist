@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/Users/osel/dev/projects/python/wonilerp_project/wonil_erp'
 let g:netrw_dirhist_2='/Users/osel'
+let g:netrw_dirhist_3='/Users/osel/dev/cocoa/Projects/AwnWireMac/Carthage/Checkouts/ReactiveCocoa'
