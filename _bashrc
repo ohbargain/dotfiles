@@ -237,13 +237,13 @@ JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_HOME
 
 #Make Python3 default
-alias python=python3
-alias pip=pip3
+#alias python=python3
+#alias pip=pip3
 
 #virtualenvwrapper loading
 export WORKON_HOME=~/dev/python/.venv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python3'
+export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python'
 export PIP_RESPECT_VIRTUALENV=true
 venwrap=`type -P /usr/local/bin/virtualenvwrapper.sh`
 if [ "$venwrap" != "" ]; then
@@ -255,9 +255,15 @@ fi
 export GOPATH=~/dev/go/packages
 
 #omnisharp settings
-source dnvm.sh
+#source dnvm.sh
 
 #cocoapod settings 
 
 export GEM_HOME=$HOME/dev/.gem
 export PATH=$GEMHOME/bin:$PATH
+
+
+#postgres.app settings
+
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+
