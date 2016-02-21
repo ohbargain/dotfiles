@@ -238,10 +238,17 @@ export ANDROID_HOME
 JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_HOME
 
+<<<<<<< HEAD
+=======
+#Make Python3 default
+#alias python=python3
+#alias pip=pip3
+
+>>>>>>> 268b9b89726753715fc6af434137b63b3318c291
 #virtualenvwrapper loading
 export WORKON_HOME=~/dev/python/.venv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
-export VIRTUALENVWRAPPER_PYTHON='/usr/local/bin/python3'
+export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python'
 export PIP_RESPECT_VIRTUALENV=true
 venwrap=`type -P /usr/local/bin/virtualenvwrapper.sh`
 if [ "$venwrap" != "" ]; then
@@ -252,7 +259,19 @@ fi
 #go setup
 export GOPATH=~/dev/go/packages
 
+<<<<<<< HEAD
+=======
+#omnisharp settings
+#source dnvm.sh
+
+>>>>>>> 268b9b89726753715fc6af434137b63b3318c291
 #cocoapod settings 
 
 export GEM_HOME=$HOME/dev/.gem
 export PATH=$GEMHOME/bin:$PATH
+
+
+#postgres.app settings
+
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+
