@@ -1,5 +1,5 @@
 [user]
-	name = Seil Oh
+	name = Seil
 	email = hardboiledbaby@gmail.com
 
 [color]
@@ -10,7 +10,7 @@
 [push]
     default = matching
 [core]
-	editor = subl -w
+	editor = mvim -w
 	excludesfile = /Users/osel/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -27,3 +27,5 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[credential]
+	helper = osxkeychain

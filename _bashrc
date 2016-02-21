@@ -224,6 +224,8 @@ PATH=$PATH:$HOME/dev/tools/qt/5.1.0/clang_64/bin:/System/Library/Frameworks/Pyth
 
 
 #gradle settings
+
+
 GRADLE_HOME=/Users/osel/dev/tools/gradle/1.9
 export GRADLE_HOME
 export PATH=$PATH:$GRADLE_HOME/bin
@@ -235,10 +237,6 @@ export ANDROID_HOME
 #mavne setting for java 7
 JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_HOME
-
-#Make Python3 default
-alias python=python3
-alias pip=pip3
 
 #virtualenvwrapper loading
 export WORKON_HOME=~/dev/python/.venv
@@ -253,9 +251,6 @@ else
 fi
 #go setup
 export GOPATH=~/dev/go/packages
-
-#omnisharp settings
-source dnvm.sh
 
 #cocoapod settings 
 
