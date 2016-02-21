@@ -238,13 +238,6 @@ export ANDROID_HOME
 JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_HOME
 
-<<<<<<< HEAD
-=======
-#Make Python3 default
-#alias python=python3
-#alias pip=pip3
-
->>>>>>> 268b9b89726753715fc6af434137b63b3318c291
 #virtualenvwrapper loading
 export WORKON_HOME=~/dev/python/.venv
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
@@ -259,12 +252,6 @@ fi
 #go setup
 export GOPATH=~/dev/go/packages
 
-<<<<<<< HEAD
-=======
-#omnisharp settings
-#source dnvm.sh
-
->>>>>>> 268b9b89726753715fc6af434137b63b3318c291
 #cocoapod settings 
 
 export GEM_HOME=$HOME/dev/.gem
