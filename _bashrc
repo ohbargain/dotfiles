@@ -262,3 +262,6 @@ export PATH=$GEMHOME/bin:$PATH
 
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
+#swift toolchain path
+export PATH="~/dev/tools/swift/usr/bin:$PATH"
+
