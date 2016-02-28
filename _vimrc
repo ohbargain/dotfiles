@@ -1,5 +1,4 @@
-" ==========================================================
-" Vundle Settings
+" ========================================================== " Vundle Settings
 " ==========================================================
 set nocompatible               " be iMproved
 filetype off                   " required!
@@ -32,6 +31,8 @@ Bundle 'fatih/vim-go'
 Bundle 'The-NERD-tree'
 Bundle 'powerline/powerline'
 Bundle 'keith/swift.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
 " Bundle 'ervandew/supertab'
 " Bundle 'Shougo/neocomplcache.vim'
 
