@@ -10,7 +10,7 @@
 [push]
     default = matching
 [core]
-	editor = mvim
+	editor = mvim -w
 	excludesfile = /Users/osel/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
