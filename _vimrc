@@ -30,19 +30,10 @@ Bundle 'fatih/vim-go'
 Bundle 'The-NERD-tree'
 Bundle 'powerline/powerline'
 Bundle 'keith/swift.vim'
-<<<<<<< HEAD
 Bundle 'mattn/emmet-vim'
-=======
 Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
-" Bundle 'ervandew/supertab'
-" Bundle 'Shougo/neocomplcache.vim'
->>>>>>> aca24ab13da22a73354bf4638d3912c047434d99
 
-
-"Bundle 'sontek/rope-vim'
-"Bundle 'davidhalter/jedi-vim'
-"
 " vim-scripts repos
 
 " non github repos
