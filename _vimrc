@@ -23,8 +23,8 @@ Bundle 'alfredodeza/pytest.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'kien/ctrlp.vim'
-Bundle 'andviro/flake8-vim'
+Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'nvie/vim-flake8'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'fatih/vim-go'
 Bundle 'The-NERD-tree'
@@ -33,6 +33,7 @@ Bundle 'keith/swift.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
+Bundle 'hynek/vim-python-pep8-indent'
 
 " vim-scripts repos
 
@@ -219,7 +220,7 @@ set infercase
 
 """" Display
 if has("gui_running")
-    colorscheme solarized
+    colorscheme molokai
 else
     colorscheme molokai
 endif
@@ -261,11 +262,11 @@ autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 so
 
 " Python
 "au BufRead *.py compiler nose
-au FileType python set omnifunc=pythoncomplete#Complete
-au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+" au FileType python set omnifunc=pythoncomplete#Complete
+" au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+" au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 " Don't let pyflakes use the quickfix window
-let g:pyflakes_use_quickfix = 0
+" let g:pyflakes_use_quickfix = 0
 
 
 
@@ -303,11 +304,6 @@ if filereadable($VIRTUAL_ENV . '/.vimrc')
     source $VIRTUAL_ENV/.vimrc
 endif
 
-" ===========================================================
-" AUTOCOMPLETE 
-" ============================================================
-let g:SuperTabDefaultCompletionType = "context"
-let g:pymode_rope_complete_on_dot = 0
 
 " ===========================================================
 " EASYMOTION MAPPING 
@@ -326,3 +322,20 @@ map <Leader>l <Plug>(easymotion-linebackward)
 " flake8-vim setting 
 " ============================================================
 map <F7> :PyFlakeAuto<CR>
+" ===========================================================
+" CtrlP Settings
+" ============================================================
+let g:ctrlp_working_path_mode=0
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
+
+" ===========================================================
+" YouCompleteMe Settings 
+" ============================================================
+let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
+let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
+let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
+let g:ycm_complete_in_comments = 1 " Completion in comments
+let g:ycm_complete_in_strings = 1 " Completion in string
+let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
