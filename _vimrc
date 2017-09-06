@@ -22,7 +22,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'alfredodeza/pytest.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'scrooloose/syntastic'
+Bundle 'vim-syntastic/syntastic'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'nvie/vim-flake8'
 Bundle 'terryma/vim-multiple-cursors'
@@ -34,6 +34,8 @@ Bundle 'mattn/emmet-vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
 Bundle 'hynek/vim-python-pep8-indent'
+Bundle 'rust-lang/rust.vim'
+Bundle 'racer-rust/vim-racer'
 
 " vim-scripts repos
 
@@ -325,7 +327,7 @@ map <F7> :PyFlakeAuto<CR>
 " ===========================================================
 " CtrlP Settings
 " ============================================================
-let g:ctrlp_working_path_mode=0
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 
@@ -339,3 +341,23 @@ let g:ycm_complete_in_comments = 1 " Completion in comments
 let g:ycm_complete_in_strings = 1 " Completion in string
 let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+
+" ===========================================================
+" Syntastic Settings 
+" ============================================================
+" 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" ===========================================================
+" Rust Settings
+" ============================================================
+set hidden
+let g:racer_cmd = "~/.cargo/bin"
+let g:racer_experimental_completer = 1
