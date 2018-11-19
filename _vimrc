@@ -36,6 +36,8 @@ Bundle 'mxw/vim-jsx'
 Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'rust-lang/rust.vim'
 Bundle 'racer-rust/vim-racer'
+Bundle 'vhda/verilog_systemverilog.vim'
+Bundle 'universal-ctags/ctags'
 
 " vim-scripts repos
 
